@@ -1,0 +1,275 @@
+
+
+header{
+  background-color: black;
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  z-index: 999;
+}
+
+.navigation{
+
+  &__logo{
+    width: 200px;
+    /*height: 66px;*/
+    height: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 1rem;
+  }
+
+  ul{
+    margin: 0;
+    padding: 0;
+  }
+
+  @mixin isMedium{
+    ul{
+      margin: 1rem;
+    }
+  }
+
+  @mixin isMedium{
+    &__logo{
+      width: 250px;
+      height: auto;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      margin-bottom: 1rem;
+    }
+  }
+
+  & a{
+    color: rgba(255,255,255,.7);
+    text-transform: uppercase;
+    font-weight: 700;
+    text-decoration: none;
+    margin: 0 1rem;
+    transition: color .5s 0s ease-in-out;
+  }
+
+  & a:focus{
+    color: white;
+    transition: color .5s 0s ease-in-out;
+  }
+
+
+  & li{
+    list-style: none;
+    margin: 2rem 0;
+
+  }
+
+  @mixin isMedium{
+    li{
+      margin: 0rem 0;
+      display: inline-block;
+    }
+  }
+
+  &__header{
+    position: absolute;
+    width: 100%;
+    /*background-color: black;*/
+  }
+
+  #navigation-menu{
+    display: none;
+
+  }
+
+
+  @mixin isMedium{
+    #navigation-menu{
+      display: block;
+      .active{
+        color: white;
+      }
+    }
+    .fixed_active{
+      position: fixed;
+      top: 0;
+      background-color: #030303;
+      width: 100%;
+      margin-top: 0;
+      padding: 0rem;
+    }
+  }
+
+  .active{
+    background-color: black;
+    transition: background-color .25s ease-in-out;
+    position: fixed;
+    height: 100%;
+  }
+
+  @mixin isMedium{
+    .active{
+      background-color: transparent;
+    }
+  }
+
+  .activeMenu{
+    display: inline-block !important;
+    width: 100%;
+  }
+
+}
+
+
+
+
+
+/* Hamburger button */
+
+#nav{
+  position: relative;
+  top: -17px;
+  left: -11px;
+  width: 5rem;
+  height: 5rem;
+}
+
+.mobileNav{
+  height: 4rem;
+  position: absolute;
+  z-index: 99999999;
+  display: block;
+  background-color: black;
+  width: 4rem;
+  top: 1.5rem;
+  left: .5rem;
+  position: fixed;
+}
+
+@mixin isMedium{
+  .mobileNav{
+    display: none;
+  }
+}
+
+.mobileNav-top_bar{
+  width: 22px;
+  height: 2px;
+  background-color: white;
+  position: absolute;
+  top: 2.5rem;
+  left: 2rem;
+  transform-origin: 0 0;
+  transition: transform .3s ease-out;
+
+}
+
+.activeX .mobileNav-top_bar{
+  transform: rotate(45deg) scaleX(1.033);
+  transform-origin: 0% 45%;
+  transition: transform .3s ease-out;
+}
+
+.mobileNav-middle_bar{
+  width: 22px;
+  height: 2px;
+  background-color: white;
+  position: absolute;
+  top: 3rem;
+  left: 2rem;
+  transform-origin: 50% 50%;
+  opacity: 1;
+  transition: all .25s ease-in-out;
+}
+
+.activeX .mobileNav-middle_bar{
+  opacity: 0;
+  transform: scaleX(0);
+}
+
+.mobileNav-bottom_bar{
+  width: 22px;
+  height: 2px;
+  background-color: white;
+  position: absolute;
+  top: 3.5rem;
+  left: 2rem;
+  transition: transform .3s ease-out;
+}
+
+.activeX .mobileNav-bottom_bar{
+  transform: rotate(-45deg) scaleX(1.04) translateY(-0px) translateX(-.2px);
+  transform-origin: 0% 45%;
+  transition: transform .3s ease-out;
+}
+
+
+
+
+/* Testing */
+
+
+.content{
+  /*margin-top: 3rem;*/
+  /*margin-bottom: 3rem;*/
+
+  &__description{
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+  }
+
+
+
+}
+
+#restaurant{
+  display: block;
+  position: relative;
+  min-height: 600px;
+  padding-top: 4rem;
+}
+
+.gallery{
+      padding-top: 4rem;
+      display: flex;
+      position: relative;
+      width: 100%;
+      height: 100%;
+      height: 400px;
+
+  img{
+    position: absolute;
+  }
+  li{
+    list-style: none;
+  }
+
+  /*::after{
+    content: "";
+   display: table;
+   clear: both;
+  }*/
+
+  .active{
+    /*z-index: 999;*/
+    img{
+      z-index: 10
+    }
+  }
+
+}
+
+.controller{
+  position: absolute;
+  display: flex;
+  width: 100%;
+  position: absolute;
+  z-index: 99;
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  align-items: center;
+  margin-top: 12rem;
+
+  span{
+    padding: 1rem;
+    background-color: aquamarine;
+  }
+}

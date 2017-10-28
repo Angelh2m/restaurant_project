@@ -1,0 +1,43 @@
+#menu{
+  padding-top: 6rem;
+  display: inline-block;
+  clear: both;
+  margin-top: 4rem;
+}
+
+.the_menu{
+
+  margin-bottom: 6rem;
+
+  /*text-align: center;*/
+  .logo{
+    display: block;
+    margin: auto;
+    /*margin-top: 4rem;*/
+    margin-bottom: 4rem;
+    width: 200px;
+  }
+  @mixin isMedium{
+    .logo{
+      display: block;
+      margin: auto;
+      /*margin-top: 4rem;*/
+      margin-bottom: 4rem;
+      width: 300px;
+    }
+  }
+
+}
+
+.logo{
+  display: block;
+margin: auto;
+/*margin-bottom: 6rem;*/
+width: 300px;
+
+}
+
+.subTitle{
+  text-align: center;
+  color: rgba(28,28,28,.8);
+}
