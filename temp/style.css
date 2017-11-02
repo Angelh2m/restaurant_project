@@ -678,26 +678,68 @@ h6 {
   }
 }
 
-/*@mixin isMedium {
-  .col-3 {
-    width: 48%;
-  }
-  .grid .col-6:nth-child(odd) {
-    clear: both;
-  }
+.gallery{
+
+  padding-top: 4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  height: 600px;
+  overflow: hidden;
+
 }
 
-@mixin isLarge {
-  .col-lg-3 {
-    width: 21%;
+.gallery img{
+    position: absolute;
   }
-  .grid .col-6:nth-child(odd) {
-    clear: none;
+
+.gallery li{
+    list-style: none;
   }
-  .grid .col-lg-3:nth-child(4) {
-    clear: both;
+
+.gallery ul{
+    padding: 0;
   }
-}*/
+
+.gallery__image{
+    height: 100%;
+    width: 100%;
+    z-index: 9;
+    position: absolute;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+  }
+
+.gallery .active .gallery__image{
+      z-index: 10
+    }
+
+.gallery__controller{
+    position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    position: absolute;
+    z-index: 99;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    color: white;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 12rem;
+  }
+
+.gallery__controller span{
+      padding: 1rem;
+      background-color: #333;
+    }
 
 header{
   background-color: black;
@@ -709,7 +751,6 @@ header{
 
 .navigation__logo{
     width: 200px;
-    /*height: 66px;*/
     height: auto;
     padding-top: 20px;
     padding-bottom: 20px;
@@ -747,12 +788,6 @@ header{
     transition: color .5s 0s ease-in-out;
   }
 
-.navigation a:focus{
-    color: white;
-    -webkit-transition: color .5s 0s ease-in-out;
-    transition: color .5s 0s ease-in-out;
-  }
-
 .navigation li{
     list-style: none;
     margin: 2rem 0;
@@ -769,7 +804,6 @@ header{
 .navigation__header{
     position: absolute;
     width: 100%;
-    /*background-color: black;*/
   }
 
 .navigation #navigation-menu{
@@ -780,6 +814,8 @@ header{
 @media(min-width: 950px){
     .navigation #navigation-menu{
       display: block;
+      -webkit-transition: all 0s;
+      transition: all 0s;
     }
       .navigation #navigation-menu .active{
         color: white;
@@ -831,7 +867,7 @@ header{
   background-color: black;
   width: 4rem;
   top: 1.5rem;
-  left: .5rem;
+  left: 1rem;
   position: fixed;
 }
 
@@ -914,15 +950,6 @@ header{
 
 /* Testing */
 
-.content{
-  /*margin-top: 3rem;*/
-
-
-
-}
-
-/*margin-bottom: 3rem;*/
-
 .content__description{
     margin-top: 4rem;
     margin-bottom: 2rem;
@@ -934,62 +961,6 @@ header{
   min-height: 600px;
   padding-top: 4rem;
 }
-
-.gallery{
-      padding-top: 4rem;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      position: relative;
-      width: 100%;
-      height: 100%;
-      height: 400px;
-
-}
-
-.gallery img{
-    position: absolute;
-  }
-
-.gallery li{
-    list-style: none;
-  }
-
-/*::after{
-    content: "";
-   display: table;
-   clear: both;
-  }*/
-
-/*z-index: 999;*/
-
-.gallery .active img{
-      z-index: 10
-    }
-
-.controller{
-  position: absolute;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
-  position: absolute;
-  z-index: 99;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  color: white;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-top: 12rem;
-}
-
-.controller span{
-    padding: 1rem;
-    background-color: aquamarine;
-  }
 
 .hero{
   position: relative;
@@ -1025,7 +996,7 @@ header{
 
 @media(min-width: 950px){
   .float_text{
-      font-size: 4rem !important;
+    font-size: 4rem !important;
   }
   }
 
@@ -1040,7 +1011,7 @@ header{
 }
 
 #menu{
-  padding-top: 6rem;
+  padding-top: 2rem;
   display: inline-block;
   clear: both;
   margin-top: 4rem;
@@ -1052,12 +1023,13 @@ header{
 
 }
 
-/*text-align: center;*/
+.the_menu h3{
+    font-weight: 700;
+  }
 
 .the_menu .logo{
     display: block;
     margin: auto;
-    /*margin-top: 4rem;*/
     margin-bottom: 4rem;
     width: 200px;
   }
@@ -1066,23 +1038,25 @@ header{
     .the_menu .logo{
       display: block;
       margin: auto;
-      /*margin-top: 4rem;*/
-      margin-bottom: 4rem;
+      margin-bottom: 1rem;
       width: 300px;
     }
   }
 
 .logo{
   display: block;
-margin: auto;
-/*margin-bottom: 6rem;*/
-width: 300px;
+  margin: auto;
+  width: 300px;
 
 }
 
 .subTitle{
   text-align: center;
   color: rgba(28,28,28,.8);
+  display: inline-block;
+  width: 100%;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
 }
 
 .drink_menu{
@@ -1092,7 +1066,6 @@ width: 300px;
 }
 
 .drink_menu-image{
-    /*position: absolute;*/
   }
 
 .drink_menu .logo{
@@ -1100,7 +1073,6 @@ width: 300px;
   }
 
 .drink_menu-details{
-    /*position: absolute;*/
     color: white;
     padding-top: 9rem;
         padding-bottom: 9rem;
@@ -1108,6 +1080,10 @@ width: 300px;
 
 .drink_menu h3,.drink_menu p{
     color: white;
+  }
+
+.drink_menu h3{
+    font-weight: 800;
   }
 
 .back_image{
@@ -1156,7 +1132,6 @@ width: 300px;
     font-size: .7rem;
     font-weight: 100;
     margin-top: 0px;
-    /*font-size: 10px;*/
     letter-spacing: .15em;
     color: black;
   }
@@ -1164,11 +1139,10 @@ width: 300px;
 .reservations h1{
     margin-bottom: 0px;
     font-size: 2.8rem;
-    /*margin-top: 6rem;*/
   }
 
 .reservations p{
-        margin-bottom: 5rem
+    margin-bottom: 5rem
   }
 
 .button{
@@ -1187,7 +1161,6 @@ width: 300px;
   background-color: #1f1f1f;
   padding: 2.5rem;
   text-align: center;
-
 }
 
 .social svg{

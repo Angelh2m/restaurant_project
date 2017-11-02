@@ -16,18 +16,13 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
-<link href="https://fonts.googleapis.com/css?family=Raleway:400,600,700,800" rel="stylesheet">
-
-<?php wp_head(); ?>
-
-
-</script>
+	<link href="https://fonts.googleapis.com/css?family=Raleway:400,600,700,800" rel="stylesheet">
+	<?php wp_head(); ?>
 
 </head>
 
 <body <?php body_class(''); ?>>
 <div>
-
 	<header class="navigation">
 		<div class="mobileNav">
 			<div id="nav" >
@@ -49,28 +44,13 @@
 				<ul>
 					<!-- <li><a  href="#restaurant"> Home </a></li> -->
 					<li><a id="nav_restaurant" href="#restaurant"> Restaurant </a></li>
+					<li><a id="home" href="#"> Home </a></li>
 					<li><a id="nav_foodMenu" href="#menu"> Menu </a></li>
 					<li><a id="nav_drinksMenu" href="#drinks"> Drinks </a></li>
 					<li><a id="nav_reservations" href="#reservations"> Reservations </a></li>
 				</ul>
 			</div>
-
 		</div>
-
-
-		<!-- <nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'restaurant' ); ?></button>
-			<?php
-				wp_nav_menu( array(
-					'theme_location' => 'menu-1',
-					'menu_id'        => 'primary-menu',
-				) );
-			?>
-		</nav>
-		 -->
-
-
-
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">

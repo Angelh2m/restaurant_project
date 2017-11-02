@@ -232,24 +232,3 @@ h6 {
     max-width: 70rem;
   }
 }
-
-/*@mixin isMedium {
-  .col-3 {
-    width: 48%;
-  }
-  .grid .col-6:nth-child(odd) {
-    clear: both;
-  }
-}
-
-@mixin isLarge {
-  .col-lg-3 {
-    width: 21%;
-  }
-  .grid .col-6:nth-child(odd) {
-    clear: none;
-  }
-  .grid .col-lg-3:nth-child(4) {
-    clear: both;
-  }
-}*/

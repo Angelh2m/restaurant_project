@@ -1,0 +1,56 @@
+
+.gallery{
+
+  padding-top: 4rem;
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  height: 600px;
+  overflow: hidden;
+
+  img{
+    position: absolute;
+  }
+
+  li{
+    list-style: none;
+  }
+  ul{
+    padding: 0;
+  }
+
+  &__image{
+    height: 100%;
+    width: 100%;
+    z-index: 9;
+    position: absolute;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+  }
+
+  .active{
+    .gallery__image{
+      z-index: 10
+    }
+  }
+
+  &__controller{
+    position: absolute;
+    display: flex;
+    width: 100%;
+    position: absolute;
+    z-index: 99;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    align-items: center;
+    margin-top: 12rem;
+
+    span{
+      padding: 1rem;
+      background-color: #333;
+    }
+  }
+
+}

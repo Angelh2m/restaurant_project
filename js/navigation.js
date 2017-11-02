@@ -17,6 +17,10 @@ class MenuScroll{
 		this.restaurant = document.getElementById('navigation-menu');
 		this.about = document.getElementById('restaurant');
 		this.menu = document.getElementById('navMenu');
+		this.reset = document.getElementById('home');
+		this.reset.addEventListener('click', ()=>{
+			this.restaurant.classList.remove('fixed_active');
+		});
 
 	}
 
@@ -24,25 +28,31 @@ class MenuScroll{
 	fixedMenu(){
 
 		this.calculation = window.addEventListener('scroll', ()=>{
-
-			// Scroll Y
-			this.scrollY = window.pageYOffset;
-
-			if (this.heightTop <= this.scrollY){
-				// If the heightTop is less than the static position from the element
-
-				// 1.- Add the class active to the menu
-				this.restaurant.classList.add('fixed_active');
-
-			}else if (! this.heightTop < this.scrollY) {
-				// If it's not less than the static position
-
-				// 1.- Remove the class active to the menu
-				this.restaurant.classList.remove('fixed_active');
-
-			}
-
+				this.rules();
 		});
+
+
+
+	}
+
+	rules(){
+		// Scroll Y
+		this.scrollY = window.pageYOffset;
+
+		if (this.heightTop <= this.scrollY){
+			// If the heightTop is less than the static position from the element
+
+			// 1.- Add the class active to the menu
+			this.restaurant.classList.add('fixed_active');
+
+		}else if (! this.heightTop < this.scrollY) {
+			// If it's not less than the static position
+
+			// 1.- Remove the class active to the menu
+			this.restaurant.classList.remove('fixed_active');
+
+		}
+
 	}
 
 
@@ -66,7 +76,7 @@ class MenuScroll{
 			section = section.offsetParent;
 		}
 		// log and return it
-		console.log(this.heightTop);
+		// console.log(this.heightTop);
 		return this.heightTop;
 	}
 
@@ -76,41 +86,41 @@ new MenuScroll();
 
 
 
-class activeMenus {
-	constructor() {
-
-	}
-	activeMenu(divElement, navElement){
-
-		let divHeight = divElement.offsetHeight + this.heightTop;
-
-		console.log(this.scrollY );
-
-			if (divHeight >= this.scrollY && divHeight > this.heightTop  ) {
-				navElement.classList.add('active');
-			}else {
-				navElement.classList.remove('active');
-			}
-
-	}
-
-	targetCalculateHeight(target, navElem){
-		// Select the div element
-		navElem
-		// Reset the heightTop value
-		let size = 0;
-		// Run the loop again
-		while(target) {
-			size += (target.offsetTop);
-			target = target.offsetParent;
-		}
-		// log and retun it
-		console.log(size + ' current ');
-		return this.size;
-
-	}
-}
-
+// class activeMenus {
+// 	constructor() {
+//
+// 	}
+// 	activeMenu(divElement, navElement){
+//
+// 		let divHeight = divElement.offsetHeight + this.heightTop;
+//
+// 		console.log(this.scrollY );
+//
+// 			if (divHeight >= this.scrollY && divHeight > this.heightTop  ) {
+// 				navElement.classList.add('active');
+// 			}else {
+// 				navElement.classList.remove('active');
+// 			}
+//
+// 	}
+//
+// 	targetCalculateHeight(target, navElem){
+// 		// Select the div element
+// 		navElem
+// 		// Reset the heightTop value
+// 		let size = 0;
+// 		// Run the loop again
+// 		while(target) {
+// 			size += (target.offsetTop);
+// 			target = target.offsetParent;
+// 		}
+// 		// log and retun it
+// 		// console.log(size + ' current ');
+// 		// return this.size;
+//
+// 	}
+// }
+//
 
 
 
@@ -134,8 +144,6 @@ class MobileMenu {
 		this.menuElement = document.querySelector('#navigation-menu');
 		this.toggleMenu();
 		this.reset();
-
-
 
 		// console.log('works');
 
@@ -175,7 +183,7 @@ new MobileMenu();
 
 class ImageCarousel {
 	constructor() {
-		
+
 		let elements = document.querySelectorAll('.gallery li');
 
 		this.array = [...elements];
@@ -187,7 +195,7 @@ class ImageCarousel {
 
 		this.init();
 
-				console.log(this.counter);
+				// console.log(this.counter);
 
 	}
 
@@ -259,5 +267,40 @@ new ImageCarousel();
 
 
 
-
+// Scroll
 //
+// document.getElementById('home')[0].onclick = function () {
+//    scrollTo(document.body, 0, 1250);
+// }
+//
+// function scrollTo(element, to, duration) {
+//     var start = element.scrollTop,
+//         change = to - start,
+//         currentTime = 0,
+//         increment = 20;
+//
+//     var animateScroll = function(){
+//         currentTime += increment;
+//         var val = Math.easeInOutQuad(currentTime, start, change, duration);
+//         element.scrollTop = val;
+//         if(currentTime < duration) {
+//             setTimeout(animateScroll, increment);
+//         }
+//     };
+//     animateScroll();
+// }
+//
+// //t = current time
+// //b = start value
+// //c = change in value
+// //d = duration
+// Math.easeInOutQuad = function (t, b, c, d) {
+//   t /= d/2;
+// 	if (t < 1) return c/2*t*t + b;
+// 	t--;
+// 	return -c/2 * (t*(t-2) - 1) + b;
+// };
+//
+//
+//
+// //

@@ -1,9 +1,10 @@
 @import "components/normalize";
 @import "components/grid";
+@import "components/gallery";
+@import "components/mixins/__mixins";
 @import "components/header";
 @import "components/intro_header_home";
 @import "components/the_menu";
 @import "components/drink_menu";
 @import "components/reservations";
 @import "components/footer";
-@import "components/mixins/__mixins";

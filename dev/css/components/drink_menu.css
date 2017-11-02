@@ -4,7 +4,6 @@
   position: relative;
 
   &-image{
-    /*position: absolute;*/
   }
 
   .logo{
@@ -12,13 +11,16 @@
   }
 
   &-details{
-    /*position: absolute;*/
     color: white;
     padding-top: 9rem;
         padding-bottom: 9rem;
   }
   & h3,p{
     color: white;
+  }
+
+  & h3{
+    font-weight: 800;
   }
 }
 
