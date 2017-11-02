@@ -16,17 +16,17 @@ get_header(); ?>
 
 
 <!-- Home -->
-<div id="home">
+
 	<div id="hero" class="hero" style="background: url('<?php bloginfo('template_url'); ?>/img/header_image.jpg')">
-		<div class="overlay"></div>
-		<div class="float_text">
+		<div class="hero__overlay"></div>
+		<div class="hero__float_text">
 			<div>
 				BEST BURGER IN <br> BROOKLYN <br>
 			</div>
 			<p>LOCALLY SOURCED × CRAFTED WITH LOVE</p>
 		</div>
 	</div>
-</div>
+
 
 <!-- Main -->
 <main>
@@ -80,15 +80,15 @@ get_header(); ?>
 
 
 	<!-- The Menu -->
-	<div class="the_menu row" id="menu" >
+	<div class="the-menu row" id="menu" >
 
 		<img
-		class="logo"
+		class="the-menu__logo"
 		src="<?php bloginfo('template_url'); ?>/img/logo_dark.png"
 		>
 
 		<div class="container">
-				<h3 class="subTitle">SNACKS X SALADS</h3>
+				<h3 class="the-menu__subtitle">SNACKS X SALADS</h3>
 				<div class="col-6">
 					<div class="flex_menu">
 						<div>
@@ -125,7 +125,7 @@ get_header(); ?>
 					<!-- End -->
 				</div>
 
-				<h3 class="subTitle">SANDWICHES</h3>
+				<h3 class="the-menu__subtitle">SANDWICHES</h3>
 
 				<div class="col-6">
 
@@ -195,7 +195,7 @@ get_header(); ?>
 					<!-- End -->
 				</div>
 
-				<h3 class="subTitle">MAINS</h3>
+				<h3 class="the-menu__subtitle">MAINS</h3>
 
 				<div class="col-6">
 
@@ -224,7 +224,6 @@ get_header(); ?>
 				</div>
 
 				<div class="col-6">
-
 					<div class="flex_menu">
 						<div>
 							<h3>Braised Lamb</h3>
@@ -254,19 +253,9 @@ get_header(); ?>
 						</div>
 						<div><span>$20</span></div>
 					</div>
-	</div>
-
-
-
+				</div>
 			<!-- End -->
 		</div>
-
-
-
-
-
-
-
 	</div>
 
 
@@ -277,12 +266,12 @@ get_header(); ?>
 
 	<div class="drink_menu" id="drinks">
 
-	<div class="back_image" style="background: url('<?php bloginfo('template_url'); ?>/img/drink.jpg')" > </div>
+	<div class="drink_menu__back-image" style="background: url('<?php bloginfo('template_url'); ?>/img/drink.jpg')" > </div>
 
 	<div class="container">
-			<div class="drink_menu-details ">
+			<div class="drink_menu__details ">
 			<img
-			class="logo"
+			class="drink_menu__logo"
 			src="<?php bloginfo('template_url'); ?>/img/logo.png"
 			>
 			<div class="row">
@@ -530,7 +519,7 @@ get_header(); ?>
 		<h1>Make a reservation</h1>
 		<h2>POWERED BY OPENTABLE</h2>
 		<div>
-			<a href="#" class="button">Find a Table</a>
+			<a href="#" class="reservations__button">Find a Table</a>
 		</div>
 
 		<p>Call (347) 555–1234 from 5a – 11p daily, or book online with OpenTable.

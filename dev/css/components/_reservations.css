@@ -24,15 +24,16 @@
     margin-bottom: 5rem
   }
 
-}
-.button{
-  background-color: #3d3d3d;
-  font-size: 13px;
-  padding: 1.1em 2.3em;
-  color: white;
-  border-radius: 300px;
-  text-decoration: none;
-  margin-top: 1rem;
-  margin-bottom: 3rem;
-  display: inline-block;
+  &__button{
+    background-color: #3d3d3d;
+    font-size: 13px;
+    padding: 1.1em 2.3em;
+    color: white;
+    border-radius: 300px;
+    text-decoration: none;
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+    display: inline-block;
+  }
+
 }

@@ -1,0 +1,47 @@
+
+.hero{
+  position: relative;
+  height: 600px;
+  background-position: center !important;
+  background-size: cover !important;
+  background-repeat: no-repeat;
+
+  @mixin isMedium{
+    height: 700px;
+  }
+
+  &__float_text{
+      position: absolute;
+      margin: 0 auto;
+      top: 37%;
+      text-align: center;
+      left: 0;
+      right: 0;
+      color: white;
+      font-size: 2rem;
+      font-weight: 900;
+      z-index: 99;
+
+      p{
+        color: white;
+      }
+  }
+
+  @mixin isMedium{
+    &__float_text{
+      font-size: 4rem !important;
+    }
+  }
+
+  &__overlay{
+    background-color: black;
+    height: 99.5%;
+    width: 100%;
+    position: absolute;
+    z-index: 9;
+    top: 0;
+    opacity: .2;
+  }
+
+
+}

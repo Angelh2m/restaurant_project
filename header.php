@@ -25,7 +25,7 @@
 <div>
 	<header class="navigation">
 		<div class="mobileNav">
-			<div id="nav" >
+			<div id="nav">
 				<div class="mobileNav-top_bar"></div>
 				<div class="mobileNav-middle_bar"></div>
 				<div class="mobileNav-bottom_bar"></div>
