@@ -18,6 +18,11 @@ header{
     margin-bottom: 1rem;
   }
 
+  .enabled{
+    font-weight: 700;
+    color: white;
+  }
+
   ul{
     margin: 0;
     padding: 0;
@@ -40,12 +45,15 @@ header{
   }
 
   & a{
-    color: rgba(255,255,255,.7);
+    /*color: rgba(255,255,255,.7);*/
+    color: rgba(194, 194, 194, 0.7);;
+
     text-transform: uppercase;
     font-weight: 700;
     text-decoration: none;
     margin: 0 1rem;
     transition: color .5s 0s ease-in-out;
+    letter-spacing: 1.5px;
   }
 
 
@@ -85,9 +93,19 @@ header{
       position: fixed;
       top: 0;
       background-color: #030303;
+      /*background-color: rgba(3, 3, 3, 0.58);*/
       width: 100%;
       margin-top: 0;
       padding: 0rem;
+
+      ul{
+        height: 14px;
+        margin-top: .8rem;
+      }
+      a{
+        font-size: .8rem;
+      }
+
     }
   }
 
@@ -212,5 +230,5 @@ header{
   display: block;
   position: relative;
   min-height: 600px;
-  padding-top: 4rem;
+  padding-top: 10rem;
 }

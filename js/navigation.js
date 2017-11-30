@@ -17,8 +17,18 @@ class MenuScroll{
 		this.about = document.getElementById('restaurant');
 		this.menu = document.getElementById('navMenu');
 		this.reset = document.getElementById('home');
+		// Get all sections
+		this.section = document.querySelectorAll('.section');
+		this.section = document.querySelectorAll('.section');
+		this.navElements = document.querySelectorAll('#navigation-menu a');
+
+		// this.res = document.getElementById('reservations');
+
+
 		this.reset.addEventListener('click', ()=>{
-			this.restaurant.classList.remove('fixed_active');
+		this.restaurant.classList.remove('fixed_active');
+
+
 		});
 
 	}
@@ -28,9 +38,9 @@ class MenuScroll{
 
 		this.calculation = window.addEventListener('scroll', ()=>{
 				this.rules();
+				this.activeMenu();
+
 		});
-
-
 
 	}
 
@@ -49,11 +59,53 @@ class MenuScroll{
 
 			// 1.- Remove the class active to the menu
 			this.restaurant.classList.remove('fixed_active');
-
 		}
 
 	}
 
+
+	activeMenu(){
+		var sections = this.section;
+		var reservations = this.res;
+		var navElements = this.navElements;
+		var height = 0;
+		var scrollY = window.pageYOffset;
+
+console.log(sections);
+
+		var array = sections.forEach(function(element, index) {
+			var offsetTop = element.offsetTop;
+			// Check the total height to the top of the browser.
+			var position = element.offsetTop;
+			// Element height
+			var elementHeight = element.clientHeight + offsetTop ;
+
+			console.log(position + ' ' + element.id + ' '+ scrollY  + " | "  + elementHeight );
+			// console.log(scrollY );
+
+			// console.log('This is the Element hight ' + elementHeight);
+
+			// When scrollY touches the height of the element display active
+			if (  scrollY > elementHeight || scrollY + 2 < offsetTop ) {
+					// scrollY < elementHeight
+					navElements[index + 1].classList.remove('enabled');
+
+			}else if (! scrollY < elementHeight){
+
+				navElements[index + 1].classList.add('enabled');
+				// console.log('less For: ' + element.id);
+				console.log(scrollY + '  ' + elementHeight );
+
+
+			}
+
+		});
+
+
+
+
+
+	}
 
 	resize(){
 		// Everytime the window is resized
@@ -84,42 +136,6 @@ class MenuScroll{
 new MenuScroll();
 
 
-
-// class activeMenus {
-// 	constructor() {
-//
-// 	}
-// 	activeMenu(divElement, navElement){
-//
-// 		let divHeight = divElement.offsetHeight + this.heightTop;
-//
-// 		console.log(this.scrollY );
-//
-// 			if (divHeight >= this.scrollY && divHeight > this.heightTop  ) {
-// 				navElement.classList.add('active');
-// 			}else {
-// 				navElement.classList.remove('active');
-// 			}
-//
-// 	}
-//
-// 	targetCalculateHeight(target, navElem){
-// 		// Select the div element
-// 		navElem
-// 		// Reset the heightTop value
-// 		let size = 0;
-// 		// Run the loop again
-// 		while(target) {
-// 			size += (target.offsetTop);
-// 			target = target.offsetParent;
-// 		}
-// 		// log and retun it
-// 		// console.log(size + ' current ');
-// 		// return this.size;
-//
-// 	}
-// }
-//
 
 
 

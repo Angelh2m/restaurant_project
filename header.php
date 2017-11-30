@@ -43,10 +43,11 @@
 			<div id="navigation-menu">
 				<ul>
 					<!-- <li><a  href="#restaurant"> Home </a></li> -->
-					<li><a id="nav_restaurant" href="#restaurant"> Restaurant </a></li>
-					<li><a id="home" href="#"> Home </a></li>
+					<li><a id="home" href="#" > Home </a></li>
+					<li><a id="nav_restaurant" href="#restaurant" class=""> The restaurant</a> </a></li>
 					<li><a id="nav_foodMenu" href="#menu"> Menu </a></li>
 					<li><a id="nav_drinksMenu" href="#drinks"> Drinks </a></li>
+
 					<li><a id="nav_reservations" href="#reservations"> Reservations </a></li>
 				</ul>
 			</div>

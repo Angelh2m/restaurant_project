@@ -1,8 +1,9 @@
 #menu{
-  padding-top: 2rem;
+
   display: inline-block;
   clear: both;
-  margin-top: 4rem;
+  padding-top: 10rem;
+  margin-top: 5px;
 }
 
 .the-menu{
@@ -11,6 +12,7 @@
 
   & h3{
     font-weight: 700;
+    color: black;
   }
 
   &__logo{
@@ -24,17 +26,18 @@
     &__logo{
       display: block;
       margin: auto;
-      margin-bottom: 1rem;
-      width: 300px;
+      margin-bottom: 2rem;
+      width: 400px;
     }
   }
 
   &__subtitle{
     text-align: center;
-    color: rgba(28,28,28,.8);
+    /*color: rgba(0, 0, 0, 0.8);*/
     display: inline-block;
     width: 100%;
     margin-top: 3rem;
     margin-bottom: 3rem;
+    font-size: 1.2rem;
   }
 }
