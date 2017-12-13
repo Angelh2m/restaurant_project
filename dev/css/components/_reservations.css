@@ -1,5 +1,9 @@
 #reservations{
-  padding-top: 9rem;
+  padding-top: 2rem;
+  @mixin isMedium{
+    padding-top: 9rem;
+
+  }
 }
 
 .reservations{

@@ -134,21 +134,21 @@ header{
 
 #nav{
   position: relative;
-  top: -17px;
-  left: -11px;
+  top: -24px;
+  left: -19px;
   width: 5rem;
   height: 5rem;
 }
 
 .mobileNav{
-  height: 4rem;
+  height: 3rem;
   position: absolute;
   z-index: 99999999;
   display: block;
   background-color: black;
-  width: 4rem;
-  top: 1.5rem;
-  left: 1rem;
+  width: 3em;
+  top: 1.5em;
+  right: 1em;
   position: fixed;
 }
 
@@ -163,8 +163,8 @@ header{
   height: 2px;
   background-color: white;
   position: absolute;
-  top: 2.5rem;
-  left: 2rem;
+  top: 2.5em;
+  left: 2em;
   transform-origin: 0 0;
   transition: transform .3s ease-out;
 
@@ -230,5 +230,8 @@ header{
   display: block;
   position: relative;
   min-height: 600px;
-  padding-top: 10rem;
+  padding-top: 5rem;
+  @mixin isMedium{
+    padding-top: 10rem;
+  }
 }
