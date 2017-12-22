@@ -6,8 +6,18 @@
   background-size: cover !important;
   background-repeat: no-repeat;
 
+
+
   @mixin isMedium{
-    height: 700px;
+    {
+      height: 700px;
+    }
+  }
+
+  @mixin isLarge{
+    {
+      height: 1200px;
+    }
   }
 
   &__float_text{

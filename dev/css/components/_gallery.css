@@ -13,6 +13,10 @@
     height: 650px;
   }
 
+  @mixin isLarge{
+    /* height: 800px; */
+  }
+
   img{
     position: absolute;
   }

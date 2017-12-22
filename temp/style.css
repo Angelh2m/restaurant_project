@@ -832,6 +832,16 @@ h6 {
   }
 
 
+@media(min-width: 1550px){
+
+
+.gallery{
+    /* height: 800px; */
+
+}
+  }
+
+
 .gallery img{
     position: absolute;
   }
@@ -1193,13 +1203,16 @@ header{
 
 
 @media(min-width: 950px){
+    .hero {
+      height: 700px;
+    }
+  }
 
 
-.hero{
-    height: 700px
-
-
-}
+@media(min-width: 1550px){
+    .hero {
+      height: 1200px;
+    }
   }
 
 
